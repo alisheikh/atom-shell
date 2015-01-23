@@ -3,6 +3,9 @@ path    = require 'path'
 timers  = require 'timers'
 Module  = require 'module'
 
+# Do not warn about deprecated APIs.
+process.noDeprecation = true
+
 process.atomBinding = (name) ->
   try
     process.binding "atom_#{process.type}_#{name}"
